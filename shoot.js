@@ -37,8 +37,7 @@ AFRAME.registerComponent("bullets", {
           mass:"0"
         })
         bullet.addEventListener("collide",this.removeBuleet)
-        //bullet.addEventListener("collide",this.reAppear)
-        this.reAppear()
+        bullet.addEventListener("collide",this.reAppear)
 
         var scene = document.querySelector("#scene");
 
@@ -85,7 +84,6 @@ AFRAME.registerComponent("bullets", {
       box.setAttribute("static-body",{})
       var sceneEl=document.querySelector("#scene")
       sceneEl.appendChild(box)
-      i=i+1
     }
     
 });
